@@ -1,0 +1,59 @@
+a,
+button {
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+button:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+.btn {
+    color: #fff!important;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    line-height: 16px;
+    background: #cb1f32;
+    border: none;
+    transition: background .25s linear;
+}
+
+.Counter {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    background: #cb1f32;
+    border-radius: 20px;
+}

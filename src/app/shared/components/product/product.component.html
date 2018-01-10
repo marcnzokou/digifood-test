@@ -1,0 +1,14 @@
+<div class="item">
+    <div class="row">
+        <div class="col-sm-4">
+            <img [src]="product.image">
+        </div>
+        <div class="col-sm-8 left">
+            {{ product.name }}
+            <p class="prize">{{ product.price }} &euro;</p>
+            <button *ngIf="count > 0" (click)="removeProduct(product)">-</button>
+            <span *ngIf="count > 0">{{ count }}</span>
+            <button (click)="addProduct(product)">+</button>
+        </div>
+    </div>
+</div>

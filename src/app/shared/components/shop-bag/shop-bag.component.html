@@ -1,0 +1,14 @@
+<nav class="cart">
+    <p>Mon panier</p>
+    <ul>
+        <li *ngFor="let data of tabCarts">
+            <div *ngIf="data.count > 0" class="item">
+
+                <img *ngIf="type =='carts'" [src]="data.image"> {{ data.name }} <span class="Counter"> {{ data.count }} </span>
+                <span *ngIf="type =='carts'" class="price"> <br> {{ data.price }} &euro;</span>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+    <a class="valid" *ngIf="getTotal(tabCarts) > 0" routerLink="/cart">Valider<span> {{ getTotal(tabCarts) }} &euro;</span></a>
+</nav>

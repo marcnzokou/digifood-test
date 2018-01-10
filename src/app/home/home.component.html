@@ -1,0 +1,20 @@
+<div class="container-lg">
+    <div class="row content">
+        <div class="col-lg-9">
+            <div *ngFor="let c of category; let i = index;">
+                <div class="title">{{ c.name }}</div>
+                <ul class="product row">
+                    <li class="col-md-6" *ngFor="let p of c.products; let i = index;">
+                        <seed-product [product]="p"></seed-product>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <!-- panier -->
+        <div class="col-lg-3 shop-bar">
+            <seed-shop-bag [type]="'bar'" [tabCarts]="carts"></seed-shop-bag>
+        </div>
+    </div>
+
+</div>

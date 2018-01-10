@@ -1,0 +1,26 @@
+// @import '~font-awesome/css/font-awesome';
+@import '~bootstrap/scss/bootstrap';
+// Partials
+@import 'partials/custom';
+@import 'partials/media';
+body {
+    background: #e6e6e6;
+    color: #212529;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+header {
+    background: #fff;
+    padding: 15px;
+}
+
+.container-lg {
+    max-width: 1012px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}

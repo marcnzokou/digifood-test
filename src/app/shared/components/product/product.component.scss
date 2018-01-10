@@ -1,0 +1,25 @@
+.item {
+    margin: 10px 0px;
+    vertical-align: middle;
+    background: #fff;
+    border-radius: 4px;
+    .left {
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 18px;
+        p {
+            opacity: .5;
+        }
+        button {
+            border-radius: 4px;
+            display: inline-block;
+            text-align: left;
+            font-weight: 700;
+            background: #cb1f32;
+            border: none;
+            color: #fff;
+            margin-top: 10px;
+        }
+    }
+}
