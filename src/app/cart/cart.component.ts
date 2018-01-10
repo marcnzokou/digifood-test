@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { NgRedux, select } from '@angular-redux/store';
 
 // store
-import { ICartState } from "../store/store";
+import { ICartState } from '../store/store';
 
 @Component({
   selector: 'seed-cart',
@@ -11,10 +11,10 @@ import { ICartState } from "../store/store";
   styleUrls: ['./cart.component.scss']
 })
 
-export class CartComponent implements OnInit{
+export class CartComponent implements OnInit {
 
     carts: ICartState[] = [];
-    
+
     constructor(
         private ngRedux: NgRedux<ICartState[]>,
         private location: Location

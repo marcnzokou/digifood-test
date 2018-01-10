@@ -13,11 +13,7 @@ export class CategoryService {
 
     // return all category
     public getAll(): Observable<ICategory[]> {
-        return this.http.get("/rest-api/category.json")
-                .map((res:any) => {
-                       res.categories;
-                       return res.categories;
-                });
+        return this.http.get('/rest-api/category.json')
+                .map((res: any[]) => res);
       }
-
 }

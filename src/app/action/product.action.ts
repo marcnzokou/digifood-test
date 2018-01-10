@@ -1,5 +1,5 @@
-export class productAction{
-    public static   add ='Add';
-    public static   remove ='Remove';
-    public static   update ='Update';
+export class ProductAction {
+    public static   add = 'Add';
+    public static   remove = 'Remove';
+    public static   update = 'Update';
 }

@@ -1,15 +1,14 @@
-import { productAction } from "../action/product.action";
-import { INITIAL_STATE } from "../store/store";
-import * as _ from 'underscore';
-import { filter } from "rxjs/operator/filter";
+import { ProductAction } from '../action/product.action';
+import { INITIAL_STATE } from '../store/store';
+import { filter } from 'rxjs/operator/filter';
 
 
 // reducer
-export const rootReduce = (state, action) => {
-    
-    switch(action.type) {
+export const rootReduce = (state: any[], action: any) => {
+
+    switch (action.type) {
         // add product
-        case productAction.add:
+        case ProductAction.add:
             let nextItemId = 1;
             // index item of state
             let indexAdd = state.findIndex(x => x.id === action.product.id);
@@ -18,8 +17,7 @@ export const rootReduce = (state, action) => {
                 state[indexAdd].count = state[indexAdd].count + 1;
                 state[indexAdd].totaux = state[indexAdd].price * state[indexAdd].count;
                 return state;
-            }
-            else {
+            } else {
                 return [
                     ...state,
                     {
@@ -35,7 +33,7 @@ export const rootReduce = (state, action) => {
             }
 
         // remove
-        case productAction.remove:
+        case ProductAction.remove:
             // index item of state
             let indexRemove = state.findIndex(x => x.id === action.product.id);
              // exist item of state

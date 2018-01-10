@@ -5,11 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // redux
-import { NgRedux, NgReduxModule, DevToolsExtension } from "@angular-redux/store";
+import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store';
 import logger from 'redux-logger';
 import { ICartState, INITIAL_STATE } from './store/store';
 import { rootReduce } from './reducer/reducer';
-
 
 // router
 import { routing } from './app.routing';
@@ -48,8 +47,8 @@ import { CategoryService } from './shared/services/category.service';
 })
 export class AppModule {
   // providers
-  constructor(ngRedux:NgRedux<ICartState[]>, devTools: DevToolsExtension){
-    let enhancers = [];
+  constructor(ngRedux: NgRedux<ICartState[]>, devTools: DevToolsExtension) {
+    let enhancers: any[] = [];
     if (devTools.isEnabled()) {
       enhancers = [ ...enhancers, devTools.enhancer() ];
     }

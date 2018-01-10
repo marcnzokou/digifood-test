@@ -28,4 +28,4 @@ import { ShopBagComponent } from './components/shop-bag/shop-bag.component';
         ShopBagComponent
     ]
 })
-export class SharedModule {}
+export class SharedModule { }

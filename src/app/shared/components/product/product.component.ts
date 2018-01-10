@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { NgRedux, select } from "@angular-redux/store";
+import { NgRedux, select } from '@angular-redux/store';
 
 import { IProduct } from '../../models/product.model';
 
 // store
-import { ICartState } from "../../../store/store";
+import { ICartState } from '../../../store/store';
 // action
-import { productAction } from "../../../action/product.action";
+import { ProductAction } from '../../../action/product.action';
 
 @Component({
   selector: 'seed-product',
@@ -18,21 +18,21 @@ export class ProductComponent {
 
     // set binding vlaue
     @Input() product: IProduct;
-    
-    count: number = 0;
+
+    count: Number = 0;
 
     constructor(
         private ngRedux: NgRedux<ICartState[]>
-    ){}
+    ) {}
 
     // add prodcut
     addProduct(p: IProduct) {
-        this.ngRedux.dispatch({type: productAction.add, product: p});
+        this.ngRedux.dispatch({type: ProductAction.add, product: p});
         this.getCount(p);
     }
     // remove product
     removeProduct(p: IProduct) {
-        this.ngRedux.dispatch({type: productAction.remove, product: p});
+        this.ngRedux.dispatch({type: ProductAction.remove, product: p});
         this.getCount(p);
     }
 
